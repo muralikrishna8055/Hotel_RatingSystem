@@ -33,7 +33,7 @@ public class HotelController {
 
     //show single data
     @GetMapping ("/{id}")
-    public ResponseEntity<Hotel> getById(@PathVariable String hotelId){
+    public ResponseEntity<Hotel> getById(@PathVariable("id") String hotelId){
         return ResponseEntity.status(HttpStatus.OK).body(service.getById(hotelId));
     }
 
